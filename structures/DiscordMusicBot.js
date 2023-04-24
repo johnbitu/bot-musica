@@ -162,10 +162,10 @@ class DiscordMusicBot extends Client {
       .on("trackStart", async (player, track) => {
         this.SongsPlayed++;
         let TrackStartedEmbed = new MessageEmbed()
-          .setAuthor(`Now playing ♪`, this.botconfig.IconURL)
+          .setAuthor(`Tocando agora ♪`, this.botconfig.IconURL)
           .setThumbnail(player.queue.current.displayThumbnail())
           .setDescription(`[${track.title}](${track.uri})`)
-          .addField("Requested by", `${track.requester}`, true)
+          .addField("Pedido por", `${track.requester}`, true)
           .setColor(this.botconfig.EmbedColor);
 
         // Check if the duration matches the duration of a livestream
@@ -175,7 +175,7 @@ class DiscordMusicBot extends Client {
           d = prettyMilliseconds(track.duration, { colonNotation: true });
         }
 
-        TrackStartedEmbed.addField("Duration", `\`${d}\``, true);
+        TrackStartedEmbed.addField("Duração", `\`${d}\``, true);
 
         //.setFooter("Started playing at");
         let NowPlaying = await client.channels.cache
@@ -185,7 +185,7 @@ class DiscordMusicBot extends Client {
       })
       .on("queueEnd", (player) => {
         let QueueEmbed = new MessageEmbed()
-          .setAuthor("The queue has ended", this.botconfig.IconURL)
+          .setAuthor("A fila terminou", this.botconfig.IconURL)
           .setColor(this.botconfig.EmbedColor)
           .setTimestamp();
         client.channels.cache.get(player.textChannel).send(QueueEmbed);
