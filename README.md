@@ -19,15 +19,3 @@ Discord.js v13 will break this bot so do not use this with it. We have been star
 [![Docker Pulls](https://img.shields.io/docker/pulls/darrenofficial/dmusicbot.svg)](https://hub.docker.com/r/darrenofficial/dmusicbot/)
 
 > Note: If you are hosting your bot in heroku, Please consider upgrading your dyno for running dashboard & bot simultaneously because in free dyno it'll run out of memory(as there are two workers). If you want to run only the bot, turn off the `web` dyno.
-
-## ✨ Contributors
-
-Contributions are always welcomed :D Make sure to follow [Contributing.md](/CONTRIBUTING.md)
-
-<a href="https://github.com/SudhanPlayz/Discord-MusicBot/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=SudhanPlayz/Discord-MusicBot" />
-</a>
-
-> **Note:** Contributions are not accepted in the master branch. If you like to contribute check out [v5 branch](https://github.com/SudhanPlayz/Discord-MusicBot/tree/v5)
-
-Made with :heart: and JavaScript!
